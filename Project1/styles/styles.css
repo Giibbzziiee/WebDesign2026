@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("images/hero.jpg");
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3em;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+.hero h2 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 1em 0 2em 0;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    flex: 1;
+}
+
+.nav-item {
+    padding: 0.8em 1.5em;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* ABOUT PARALLAX */
+#about {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4em 2em;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3em;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.content-box h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 0;
+}
+
+.content-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #555;
+    margin-top: 1.5em;
+}
+
+.content-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* GAMING SECTION */
+.dark-section {
+    min-height: 100vh;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 4em 2em;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.dark-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.gaming-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gaming-story {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.gaming-story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #ff9800;
+    margin-top: 1.5em;
+}
+
+.gaming-story h2:first-child {
+    margin-top: 0;
+}
+
+.gaming-story p {
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+/* FOOTER SECTION */
+.footer-section {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 3em 2em;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+}
+
+.footer-section p {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+}
+
+
+/* Never forget the Media Queries */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero h2 {
+        font-size: 1.2em;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    
+    .content-box {
+        padding: 2em;
+    }
+    
+    .content-box h1 {
+        font-size: 2em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-content {
+        padding: 2em 1.5em;
+    }
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero h2 {
+        font-size: 1em;
+    }
+    
+    .content-box {
+        padding: 1.5em;
+    }
+    
+    .content-box h1 {
+        font-size: 1.8em;
+    }
+    
+    .content-box h2 {
+        font-size: 1.5em;
+    }
+    
+    .dark-section h1 {
+        font-size: 2em;
+    }
+    
+    .gaming-story {
+        padding: 1.5em;
+    }
+}
