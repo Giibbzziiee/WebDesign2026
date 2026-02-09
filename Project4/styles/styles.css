@@ -59,7 +59,7 @@ body {
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .main-nav.scrolled {
