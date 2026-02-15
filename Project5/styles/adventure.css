@@ -1,0 +1,132 @@
+body {
+  background: #0d0d0d url('images/space1.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.story-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #ff9800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+#scene-image {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+#story-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  white-space: pre-wrap;
+}
+
+/* Choices */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.choice-btn {
+  background: #902102;
+  color: white;
+  border: 2px solid #ff9800;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.choice-btn:hover {
+  background: #ff9800;
+  color: #111;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.3);
+}
+
+.restart-btn {
+  background: #444;
+  border-color: #777;
+  margin-top: 1.5rem;
+}
+
+.restart-btn:hover {
+  background: #666;
+}
+
+/* INPUT FIELDS */
+.input-group {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.input-label {
+  display: block;
+  color: #ff9800;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.text-input {
+  width: 95%;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.05rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ff9800;
+  border-radius: 6px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #ffc107;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 20px rgba(255, 152, 0, 0.4);
+}
+
+.text-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .story-wrapper {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  h1 { font-size: 2rem; }
+  #story-text { font-size: 1.05rem; }
+  .choice-btn { padding: 0.9rem 1.2rem; font-size: 1rem; }
+  .text-input { font-size: 1rem; }
+}

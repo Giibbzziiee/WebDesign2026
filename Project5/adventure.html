@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star-Born | Ethan Gibson</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/adventure.css">
+
+</head>
+
+<body>
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span>Gibson Media</span>
+    </a>
+
+    <!-- mobile logo -->
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Navigation links -->
+    <div class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="story-wrapper">
+    <h1>Star-Born</h1>
+
+    <img id="scene-image" src="styles/images/space2.jpg" alt="Current scene">
+
+    <div id="story-text">Loading the night...</div>
+
+    <div class="choices" id="choices-area"></div>
+  </div>
+
+  <script src="scripts/adventure.js"></script>
+
+</body>
+</html>
