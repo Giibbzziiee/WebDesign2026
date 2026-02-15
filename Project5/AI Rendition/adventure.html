@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star-Born | Ethan Gibson</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/adventure.css">
+
+</head>
+
+<body>
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span>Gibson Media</span>
+    </a>
+
+    <!-- mobile logo -->
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Navigation links -->
+    <div class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="story-wrapper">
+    <h1>Star-Born</h1>
+    <img id="scene-image" src="" alt="Current scene">
+    
+    <div id="story-text">Loading the night...</div>
+
+    <div class="input-container" style="margin-top: 20px;">
+        <p><em style="color: #aaa;">Type your choice and press Enter:</em></p>
+        <input type="text" id="user-input" placeholder="What will you do?" autofocus 
+               style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ff9800; background: #222; color: #fff;">
+        <div id="feedback" style="color: #ff9800; margin-top: 10px; font-weight: bold;"></div>
+    </div>
+
+    <div id="history-section" style="margin-top: 30px; border-top: 1px solid #444; padding-top: 15px;">
+        <h3 style="font-size: 1rem; color: #ff9800;">Mission Log (History)</h3>
+        <ul id="history-list" style="list-style: none; padding: 0; font-size: 0.9rem; color: #ccc;"></ul>
+    </div>
+</div>
+
+  <script src="scripts/adventure.js"></script>
+
+</body>
+</html>

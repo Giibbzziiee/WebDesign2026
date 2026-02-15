@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Gibson - MART 441</title>
+    <meta name="author" content="Your Name">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+    body {
+      background-color: #902102;
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<!-- Main Navigation -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span>Gibson Media</span>
+    </a>
+
+    <!-- mobile logo -->
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Navigation links -->
+    <div class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gaming" class="nav-link">Gaming Memory</a></li>
+        <li><a href="adventure.html" class="nav-link">Adventure Story</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Ethan Gibson</h1>
+            <h2>Games, Cars, and Music.</h2>
+            <p>I'm actually a puddle if you know me.</p>
+        </div>
+    </div>
+
+    <!-- ABOUT ME -->
+    <div id="about">
+        <div class="section-container">
+            <div class="content-box">
+                <h1>About Me</h1>
+                <p><strong>Major:</strong> Media Arts</p>
+                <p><strong>Expected Graduation:</strong> 05/2026</p>
+                
+                <h2>Skills & Interests</h2>
+                <p>I’m Ethan Gibson, a media arts student with a passion for creating across multiple disciplines.
+                   I work with photography, filmmaking, sound design, graphic design, and web development, and 
+                   I’m always looking for ways to blend technology with storytelling. I enjoy hands-on projects,
+                   whether that means building websites, designing brands, editing video, or experimenting with
+                   audio. Outside of digital work, I’m into automotive projects, retro gaming, and creative 
+                   entrepreneurship. I’m driven by curiosity, problem-solving, and collaboration, and I’m always
+                   pushing to turn ideas into finished experiences that feel personal, expressive, and visually
+                   engaging.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME MEMORIES -->
+    <div class="dark-section" id="gaming">
+        <h1>A Gaming Memory</h1>
+        
+        <div class="gaming-content">
+            <div class="gaming-story">
+                <h2>Sly Cooper 2: Band of Thieves</h2>
+                <p><strong>Game Title:</strong> Sly Cooper 2: Band of Thieves</p>
+                <p><strong>Platform:</strong> PS2 </p>
+                <p><strong>When:</strong> 2004 </p>
+                
+                <h2>The Memory</h2>
+                <p>I think this was one of the very first games I ever played when I really started becoming conscious
+                   as a human being. You know, instead of being completely oblivious to the world like most 4 year olds.
+                   It's one of my earliest gaming memories, sitting in front of the TV with my older brother trying to
+                   steal the mechanical body parts of the games big bad, "Clockwerk."</p>
+
+                <p>I remember being absolutely fascinated by this game. It was probably what really set me on a path
+                of generally preferring single player games over multiplayer because the story in this game was just so fun, cheesy,
+                and easy to follow when I first played it. I played it again just a couple months back and the games are still just as
+                fantastic as they were in my childhood.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-section" id="contact">
+        <h2>Get In Touch</h2>
+        <p>Email: giibbz@outlook.com</p>
+        <p>Portfolio: <a href="https://gibsonmedia3.wordpress.com/" target="_blank">Word Press</a></p>
+        <p>GitHub: <a href="https://github.com/Giibbzziiee/" target="_blank">Giibbzziiee</a></p>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+
+    <script>
+    // I needed something to fix the page loading scrolled halfway down because I do not know where I messed up and caused that to happen.
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+    </script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 body {
-  background: #0d0d0d url('images/space1.gif') no-repeat center center fixed;
+  background: #0d0d0d url('images/space1.gif') repeat center center fixed;
   background-size: cover;
   color: #eee;
   font-family: 'Roboto', sans-serif;
