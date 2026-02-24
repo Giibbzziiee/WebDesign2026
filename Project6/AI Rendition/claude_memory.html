@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0a0a0f;
+            --surface: #13131a;
+            --border: #2a2a3a;
+            --accent: #c8f060;
+            --accent2: #f060a8;
+            --text: #e8e8f0;
+            --muted: #6a6a80;
+            --matched: #c8f06022;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'DM Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        /* Subtle grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 560px;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        h1 span {
+            color: var(--accent2);
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin-top: 0.2rem;
+        }
+
+        /* Game board */
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        .tile {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.15s, background-color 0.3s;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tile:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .tile.revealed {
+            border-color: var(--accent2);
+            cursor: default;
+        }
+
+        .tile.revealed:hover {
+            transform: none;
+            border-color: var(--accent2);
+        }
+
+        footer {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-right: 0.4rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <span class="label">// week 01 — arrays &amp; loops</span>
+        <h1>Memory <span>Match</span></h1>
+        <p class="subtitle">Click a tile to reveal what's underneath.</p>
+    </header>
+
+    <div id="game-board"></div>
+
+    <footer>
+        <span><span class="dot"></span>12 tiles &mdash; 6 pairs</span>
+        <span>Math.random() shuffled</span>
+    </footer>
+</div>
+
+<script>
+    // --- Arrays ---
+
+    // Array of 12 blank images (what the user sees first)
+    var blankImages = [];
+    for (var i = 0; i < 12; i++) {
+        blankImages[i] = "styles/images/memory/blank.png";
+    }
+
+    // Array of 12 actual images — 6 pairs
+    var actualImages = [
+        "styles/images/memory/Mailk.png", "styles/images/memory/Mailk.png",
+        "styles/images/memory/POMS.png",  "styles/images/memory/POMS.png",
+        "styles/images/memory/BBS.png",   "styles/images/memory/BBS.png",
+        "styles/images/memory/CBS.png",   "styles/images/memory/CBS.png",
+        "styles/images/memory/DCSS.png",  "styles/images/memory/DCSS.png",
+        "styles/images/memory/MDS.png",   "styles/images/memory/MDS.png"
+    ];
+
+    // --- Randomize using Math.random() (Fisher-Yates) ---
+    for (var i = actualImages.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = actualImages[i];
+        actualImages[i] = actualImages[j];
+        actualImages[j] = temp;
+    }
+
+    // --- Display tiles using a for loop ---
+    var gameBoard = document.getElementById('game-board');
+
+    for (var i = 0; i < blankImages.length; i++) {
+        var tile = document.createElement('img');
+        tile.src = blankImages[i];
+        tile.classList.add('tile');
+        tile.dataset.index = i;
+
+        // On click, reveal the actual image
+        tile.addEventListener('click', function() {
+            var index = this.dataset.index;
+            this.src = actualImages[index];
+            this.classList.add('revealed');
+        });
+
+        gameBoard.appendChild(tile);
+    }
+</script>
+
+</body>
+</html>
