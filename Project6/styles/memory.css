@@ -1,0 +1,25 @@
+/* Memory styles sheet */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.tile {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #444;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
