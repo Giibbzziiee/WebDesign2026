@@ -79,8 +79,7 @@ const slideInfo    = document.querySelector('.sv-slide-info');
 // STATE
 let queue = [];
 
-// Build a shuffled queue of all slide indexes
-// When the queue runs out, reshuffle and start again
+// FISHER-YATES SHUFFLED QUEUE
 function buildQueue() {
     let indexes = slides.map((_, i) => i);
     for (let i = indexes.length - 1; i > 0; i--) {
@@ -97,8 +96,7 @@ function getNextIndex() {
     return queue.shift();
 }
 
-// Update the DOM with a slide's data
-// instant = true skips the fade, used for first load so Loading... clears right away
+// Update DOM
 function displaySlide(index, instant = false) {
     const slide = slides[index];
 
@@ -135,15 +133,13 @@ function displaySlide(index, instant = false) {
 // INIT
 slideTotalEl.textContent = slides.length;
 
-// First slide loads instantly so Loading... is replaced right away
 displaySlide(getNextIndex(), true);
 
-// Button click, load next slide from shuffled queue
 nextBtn.addEventListener('click', () => {
     displaySlide(getNextIndex());
 });
 
-// NAV (matches scripts.js pattern)
+// NAV
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu   = document.querySelector('.nav-menu');
 
