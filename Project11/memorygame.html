@@ -1,0 +1,42 @@
+<!-- Gibson Media - Ethan Gibson - MART 441 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/memory.css">
+</head>
+
+<!-- Main Navigation -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span>Gibson Media</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="adventure.html" class="nav-link">Adventure Story</a></li>
+        <li><a href="index.html" class="nav-link">Home Page</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+    <main class="dark-section">
+        <h1>Test Your Memory</h1>
+        <p id="playerInfo" class="setup-subtitle"></p>
+        <p class="attempt-tracker">Attempts: <span id="attemptCount">0</span></p>
+        <div id="game-board" class="game-grid"></div>
+    </main>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/memory.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* Gibson Media - Ethan Gibson - MART 441 */
+
+/* HERO OVERRIDE */
+.ytcats-hero {
+    background: linear-gradient(135deg, #6b1800 0%, #902102 50%, #4a0f00 100%);
+    min-height: 38vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+}
+
+.ytcats-hero .hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.ytcats-hero .hero-content h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+}
+
+.ytcats-hero .hero-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+}
+
+/* WRAPPER */
+.ytcats-wrapper {
+    background-color: #111;
+    min-height: 60vh;
+    padding: 3rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* INTRO TEXT */
+.ytcats-intro {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+}
+
+.ytcats-intro p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+}
+
+/* TWO COLUMN LAYOUT */
+.ytcats-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .ytcats-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* COLUMN HEADERS */
+.column-header {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1.25rem;
+}
+
+.assignable-header {
+    background: linear-gradient(135deg, #215521, #103510);
+    border-bottom: 2px solid #28852c;
+}
+
+.nonassignable-header {
+    background: linear-gradient(135deg, #3a1a1a, #2a0f0f);
+    border-bottom: 2px solid #995609;
+}
+
+.column-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.assignable-header .column-icon { color: #49b94c; }
+.nonassignable-header .column-icon { color: #db312e; }
+
+.column-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0 0 0.3rem;
+}
+
+.column-header p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    margin: 0;
+}
+
+/* CARD GRID */
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* CATEGORY CARD */
+.cat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    background: #1a1a1a;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.cat-card.assignable {
+    border-left-color: #2e7d32;
+}
+
+.cat-card.nonassignable {
+    border-left-color: #902102;
+}
+
+.cat-card:hover {
+    background: #252525;
+    transform: translateX(4px);
+}
+
+.cat-id {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.3);
+    min-width: 28px;
+    text-align: right;
+}
+
+.cat-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+}
+
+/* HIGHLIGHTED STATE - jQuery */
+.cat-card.highlighted {
+    background: #2a2a2a;
+    border-left-width: 5px;
+}
+
+.cat-card.highlighted .cat-title {
+    color: #fff;
+}
+
+.cat-card.highlighted.assignable .cat-title {
+    color: #81c784;
+}
+
+.cat-card.highlighted.nonassignable .cat-title {
+    color: #ef9a9a;
+}
