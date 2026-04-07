@@ -25,4 +25,4 @@ The update loop pattern was the thing that clicked most. Clear, update state, dr
 
 ## Takeaways  
 
-Even a simple prototype involves more stacking decisions than it looks like from the outside. Boundary clamping, collision timing, game over state — none of it is hard alone, but getting it all working together takes real iteration.
+Even a simple prototype involves more stacking decisions than it looks like from the outside. Boundary clamping, collision timing, game over state. None of it is hard alone, but getting it all working together takes real iteration.
