@@ -4,7 +4,7 @@
 
 ## The What  
 
-For this assignment, I built a small canvas survival game called **Rune Runner** for my Gibson Media portfolio. You control a glowing orange rune with WASD or arrow keys and try to avoid a bouncing wraith. Ten collisions triggers a game over overlay, and R restarts without a page reload.
+For this assignment, I built a small canvas survival game called **Rune Runner** for my Gibson Media portfolio. You control a glowing orange rune with WASD or arrow keys and try to catch a bouncing wraith. Ten collisions triggers a game win overlay, and R restarts without a page reload.
 
 
 ## The How  
