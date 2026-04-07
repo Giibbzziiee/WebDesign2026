@@ -13,7 +13,7 @@ The dark, minimal aesthetic was already established across the rest of my portfo
 
 The animation loop runs at `1000/60` for roughly 60fps. Getting `clearRect()` in the right place early mattered more than I expected since leaving it out causes streaking fast. The music uses a Play/Pause button instead of autoplay since browsers block that until the user interacts with the page.
 
-The wraith also scales in difficulty as collisions stack up. Each hit increases its speed and nudges its velocity slightly toward the player, so it transitions from purely bouncing to actively hunting over the course of the game. The key to keeping that from spiraling out of control was normalizing the velocity every frame, calculating the current magnitude and rescaling it back to the target speed so the steering affects direction without compounding the overall pace.
+The wraith also scales in difficulty as collisions stack up. Each hit increases its speed and nudges its velocity slightly from the player, so it transitions from purely bouncing to actively running over the course of the game. The key to keeping that from spiraling out of control was normalizing the velocity every frame, calculating the current magnitude and rescaling it back to the target speed so the steering affects direction without compounding the overall pace.
 
 The page follows the same file structure as the rest of the portfolio. Styles live in `styles/canvas.css`, game logic in `scripts/canvas.js`, and the background track in its own `audio/` folder. Keeping everything separated made the HTML itself pretty lean.
 
