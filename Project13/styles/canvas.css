@@ -1,0 +1,117 @@
+/* Gibson Media - Ethan Gibson - MART 441 */
+
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+}
+
+.canvas-section {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    padding-top: 100px;
+}
+
+.canvas-title {
+    font-family: 'Playfair Display', serif;
+    color: #ff9800;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+.canvas-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-weight: 300;
+}
+
+#gameCanvas {
+    border: 2px solid #ff9800;
+    box-shadow: 0 0 30px rgba(255, 152, 0, 0.3), 0 0 60px rgba(255, 152, 0, 0.1);
+    display: block;
+    max-width: 100%;
+}
+
+/* Controls */
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1.2em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.controls-hint {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.controls-hint span {
+    color: #ff9800;
+    font-weight: 400;
+}
+
+/* Audio controls */
+.audio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.audio-label {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+#playMusicBtn {
+    background: transparent;
+    border: 1px solid #ff9800;
+    color: #ff9800;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85em;
+    padding: 0.4em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#playMusicBtn:hover {
+    background: #ff9800;
+    color: #1a1a1a;
+}
+
+/* Score / status display */
+.game-status {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6em;
+}
+
+.status-text {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.status-text span {
+    color: #ff9800;
+    font-weight: 400;
+}
