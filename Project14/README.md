@@ -2,18 +2,11 @@
 ### MART 441 | Ethan Gibson  
 
 
-## The What  
+## What did I do?
+I found things to be pretty simple this time around. Being walked through how to structure the Phaser game made it extremely easy to go through and change a few things. I added an extra 4 stars and changed the space between them by 20 pixels down to 50. I also adjusted where the player spawns as well as increased the amount of bombs that spawn when the stars are all collected. I threw in another platform as well, but I feel it could be moved to a different spot so it felt less pointless.
 
-**Rune Runner** is a tag game built on HTML5 Canvas. You and three AI entities share the canvas. One is always "it" and chases the others. Get tagged and you become the chaser. Speed boosts in the corners give a temporary burst, and five pillar obstacles break up the space to hopefully keep the entities moving randomly, however it doesn't always work perfectly.
+## What surprised me?
+This is just a super easy way to build games. The code is super self explanatory when you go through and read it all. I felt like a bit of an idiot at first when I couldn't find the assets for the Hello World example anywhere, but that issue solved itself after clicking to the next lesson in the module.
 
-
-## The How  
-
-Built around a shared `Entity` class covering movement, collision, immunity timers, and speed boosts for both the player and AI using skills I learned from a Game Jams class as well as some AI polishing. Obstacles and collectibles load from external JSON files via `fetch()` and get mapped into class instances stored in arrays. AABB collision handles both obstacle blocking and tag transfers, with X and Y axes checked separately for smooth edge sliding. An immunity timer prevents instant tag-backs.
-
-AI behavior is state-driven; tagged entities chase, untagged ones flee. The flee logic takes the quickest route away from whoever is it with a small random drift added. It works but isn't as dynamic as I'd have liked. Proper randomized pathfinding that accounts for obstacles would have made the AI feel a lot less predictable, and that's something I'd revisit given more time.
-
-
-## Takeaways  
-
-State management ended up being the core challenge. Every entity needs to know what it is, what it was, and whether it can be tagged. Keeping that clean inside the class made everything else easier to reason about.
+## This, or Canvas?
+Phaser for sure. I was not a big fan of Canvas and I feel like it's way easier to add new assets and various elements and variables to your game.
