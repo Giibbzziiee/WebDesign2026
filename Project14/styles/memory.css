@@ -1,0 +1,153 @@
+/* Gibson Media - Ethan Gibson - MART 441 */
+
+/* Memory styles sheet */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.tile {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #444;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+/* Setup Page Styles*/
+
+.setup-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.setup-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.5em;
+}
+
+.setup-field {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.setup-field label {
+    display: block;
+    color: #ff9800;
+    margin-bottom: 0.3em;
+}
+
+.setup-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8em;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 152, 0, 0.4);
+    border-radius: 7px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.setup-field input:focus {
+    outline: none;
+    border-color: #ff9800;
+}
+
+.setup-field input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.setup-error {
+    display: block;
+    color: #ff5252;
+    font-size: 0.85em;
+    min-height: 1.2em;
+    margin-top: 0.2em;
+}
+
+.setup-btn {
+    margin-top: 1.5em;
+    width: 100%;
+    padding: 0.9em;
+    background: #902102;
+    color: white;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setup-btn:hover {
+    background: #ff9800;
+    color: #111;
+}
+
+.setup-btn--ghost {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.setup-btn--ghost:hover {
+    background: transparent;
+    color: #ff5252;
+    border-color: #ff5252;
+}
+
+/* Finale page styles */
+
+.results-container {
+    max-width: 440px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 152, 0, 0.25);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+}
+
+.result-label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.3em;
+}
+
+.result-value {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin: 0 0 1.2em;
+}
+
+.result-highlight {
+    color: #ff9800;
+    font-size: 2rem;
+}
+
+.results-btn-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.results-btn-row .setup-btn {
+    flex: 1;
+    margin-top: 0;
+}
