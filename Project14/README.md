@@ -10,3 +10,6 @@ This is just a super easy way to build games. The code is super self explanatory
 
 ## This, or Canvas?
 Phaser for sure. I was not a big fan of Canvas and I feel like it's way easier to add new assets and various elements and variables to your game.
+
+## What I did after realizing I didn't do everything needed
+I changed up the player sprite, added a new star spawn as well as spike hazards, and swapped the jump logic to the space bar. I believe that covered the assignment requirements.
