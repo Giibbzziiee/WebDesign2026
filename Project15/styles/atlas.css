@@ -1,0 +1,230 @@
+/* Gibson Media - Ethan Gibson - MART 441 */
+/* Atlas Page Styles */
+
+:root {
+    --orange: #ff9800;
+    --orange-dim: rgba(255, 152, 0, 0.15);
+    --orange-glow: rgba(255, 152, 0, 0.35);
+    --dark: #1a1a1a;
+    --dark-mid: #242424;
+    --dark-card: #2c2b28;
+    --text-muted: rgba(255, 255, 255, 0.55);
+}
+
+/* NOISE TEXTURE OVERLAY */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+/* ATLAS HERO — uses hero.jpg from styles.css body background */
+.atlas-hero-banner {
+    height: 45vh;
+    min-height: 320px;
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.atlas-hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(26,26,26,0.85) 100%);
+}
+
+.atlas-hero-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.atlas-eyebrow {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+
+.atlas-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+.atlas-title em {
+    font-style: italic;
+    color: var(--orange);
+}
+
+.atlas-subtitle {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* DIVIDER */
+.atlas-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--orange);
+    margin: 2.5rem auto;
+    opacity: 0.6;
+}
+
+/* GRID SECTION */
+.atlas-grid-section {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+}
+
+.atlas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* CARD */
+.atlas-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    padding: 2rem 2rem 1.75rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.atlas-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.atlas-card:hover {
+    border-color: var(--orange-glow);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--orange-glow);
+}
+
+.atlas-card:hover::before { transform: scaleX(1); }
+
+.card-number {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--orange);
+    opacity: 0.7;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-muted);
+    flex-grow: 1;
+}
+
+.card-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    opacity: 0.6;
+    margin-top: 0.25rem;
+}
+
+.card-arrow {
+    position: absolute;
+    bottom: 1.75rem;
+    right: 2rem;
+    color: var(--orange);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    font-size: 1.1rem;
+}
+
+.atlas-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* FOOTER */
+.atlas-footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    background: #111;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.atlas-footer a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+/* FADE-IN ANIMATIONS */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.atlas-hero-banner { animation: fadeUp 0.7s ease both; }
+.atlas-card:nth-child(1) { animation: fadeUp 0.6s 0.15s ease both; }
+.atlas-card:nth-child(2) { animation: fadeUp 0.6s 0.22s ease both; }
+.atlas-card:nth-child(3) { animation: fadeUp 0.6s 0.29s ease both; }
+.atlas-card:nth-child(4) { animation: fadeUp 0.6s 0.36s ease both; }
+.atlas-card:nth-child(5) { animation: fadeUp 0.6s 0.43s ease both; }
+.atlas-card:nth-child(6) { animation: fadeUp 0.6s 0.50s ease both; }
+.atlas-card:nth-child(7) { animation: fadeUp 0.6s 0.57s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .atlas-grid { grid-template-columns: 1fr; }
+}

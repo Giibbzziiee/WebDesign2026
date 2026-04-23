@@ -1,0 +1,59 @@
+<!-- Gibson Media - Ethan Gibson - MART 441 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/memory.css">
+</head>
+
+<!-- Main Navigation -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span>Gibson Media</span>
+    </a>
+
+    <!-- mobile logo -->
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Navigation links -->
+    <div class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li><a href="atlas.html" class="nav-link">Atlas</a></li>
+        <li><a href="index.html" class="nav-link">Index</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+    <main class="dark-section">
+        <h1>&#127942; Results</h1>
+
+        <div class="results-container">
+            <p class="result-label">Player</p>
+            <p class="result-value" id="resultName"></p>
+
+            <p class="result-label">Age</p>
+            <p class="result-value" id="resultAge"></p>
+
+            <p class="result-label">Total Attempts</p>
+            <p class="result-value result-highlight" id="resultAttempts"></p>
+
+            <div class="results-btn-row">
+                <button class="setup-btn" onclick="window.location.href='memorysetup.html'">Play Again</button>
+                <button class="setup-btn setup-btn--ghost" onclick="resetGame()">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/memory.js"></script>
+</body>
+</html>
