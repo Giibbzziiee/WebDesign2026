@@ -13,3 +13,4 @@ Web Design Repository for my 2026 Web Design course.
 [Assignment 13](https://giibbzziiee.github.io/WebDesign2026/Project13/)
 [Assignment 14](https://giibbzziiee.github.io/WebDesign2026/Project14/)
 [Assignment 15](https://giibbzziiee.github.io/WebDesign2026/Project15/)
+[Final](https://giibbzziiee.github.io/WebDesign2026/Final/)
